@@ -4,20 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.function.Consumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.mongodb.Block;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 import com.mongodb.util.JSON;
-import org.bson.Document;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.jsoup.Jsoup;
@@ -27,7 +22,7 @@ import org.jsoup.select.Elements;
 
 import us.codecraft.xsoup.Xsoup;
 
-public class App1 {
+public class App {
   public static void main(String... args) throws Exception{
     ApiUrlGenerator urlGen = new ApiUrlGenerator(true, "", "", "UPCOMING", "", "", "YES", "NCERT", 105);
     String jsonResponse = fetchFromApi(urlGen);
