@@ -101,6 +101,7 @@ public class ScraperService {
 
   private void mongoInsert(String jsonResponse) {
     try {
+
         Mongo mongo = new Mongo("localhost", 27017);
         DB db = mongo.getDB("test");
         DBCollection collection = db.getCollection("courses");
